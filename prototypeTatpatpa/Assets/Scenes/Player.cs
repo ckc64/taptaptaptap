@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private int jumpForce = 10;
-    public Rigidbody2D rigidbody;
+    [SerializeField] private Rigidbody2D rigidbody2d;
  
 
     // Update is called once per frame
@@ -16,7 +16,9 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log(Vector2.up);
-            rigidbody.velocity = Vector2.up * jumpForce;
+            rigidbody2d.velocity = Vector2.up * jumpForce;
         }
     }
+
+
 }
